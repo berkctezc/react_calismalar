@@ -8,22 +8,24 @@ import ProductList from "./ProductList";
 import { Container, Row, Col } from "reactstrap"; //kullandığımız reactstrap özellikleri import edildi
 
 function App() {
+  let titleNavi="Navbar"
   return (
     <div className="App">
       <Container>
         <Row>
-          <Navi/>
+          <Navi title={titleNavi}/> {/* Bu sekilde de propsdan deger alinabilir*/}
         </Row>
         <Row>
           <Col xs="3">
-          <CategoryList />
+          <CategoryList title="Category List"/> {/*Props yapisi icin*/}
           </Col>
           <Col xs="9">
-          <ProductList />
+          <ProductList title="Product List"/>
           </Col>
         </Row>
       </Container>
-    </div>
+       {/*JSX içinde JS kodu yazmak için "{}" kullanilir */}
+    </div>    
   ); //olusturdugumuz navi componenti
 }
 
