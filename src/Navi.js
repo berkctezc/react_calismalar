@@ -4,7 +4,7 @@ export default class Navi extends Component { //public olarak navi componentden 
     render() {
         return (
             <div>
-             <h2>{this.props.title}</h2>   
+             <h2>{this.props.info.title}</h2>   
             </div>
         )
     }

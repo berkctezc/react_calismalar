@@ -8,19 +8,21 @@ import ProductList from "./ProductList";
 import { Container, Row, Col } from "reactstrap"; //kullandığımız reactstrap özellikleri import edildi
 
 function App() {
-  let titleNavi="Navbar"
+  let infoNavi={title:"Navbar"}
+  let productInfo={title:"Product List"}
+  let categoryInfo={title:"Category List"}
   return (
     <div className="App">
       <Container>
         <Row>
-          <Navi title={titleNavi}/> {/* Bu sekilde de propsdan deger alinabilir*/}
+          <Navi info={infoNavi}/> {/* Bu sekilde de propsdan deger alinabilir*/}
         </Row>
         <Row>
           <Col xs="3">
-          <CategoryList title="Category List"/> {/*Props yapisi icin*/}
+          <CategoryList info={categoryInfo}/> {/*Props yapisi icin*/}
           </Col>
           <Col xs="9">
-          <ProductList title="Product List"/>
+          <ProductList info={productInfo}/>
           </Col>
         </Row>
       </Container>

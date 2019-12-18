@@ -5,7 +5,7 @@ export default class CategoryList extends Component {
    render() {
     return (
       <div>
-        <h3>{this.props.title}</h3> {/* App.js'de component'e yazılan title degeri -> <h3>Category List</h3> */}
+        <h3>{this.props.info.title}</h3> {/* App.js'de component'e yazılan title degeri -> <h3>Category List</h3> */}
         {/*Reactstrapten kullandığımız listgroup*/}
         <ListGroup>
           <ListGroupItem>Cras justo odio</ListGroupItem>
