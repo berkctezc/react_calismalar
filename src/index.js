@@ -2,7 +2,8 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
-//import bootstrap from 'bootstrap/dist/css/bootstrap.min.css';
+
+import 'bootstrap/dist/css/bootstrap.min.css'; //reactstrapde olmayan özellikler için bootstrap import ediliyor
 
 ReactDOM.render(<App />, document.getElementById('root'));
 

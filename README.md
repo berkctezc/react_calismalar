@@ -9,21 +9,21 @@
 
    2. Install React's app creator from npm with this command (-g means global installation to your system)
 
-      ```
-      npm install -g create-react-app
+      ```bash
+      npm i -g create-react-app
       OR
       yarn global add create-react-app
       ```
 
    3. Execute this command on the directory you wish to store your project
 
-      ```
+      ```bash
       npx create-react-app yourappname
       ```
 
    4. Cd into your app and npm/yarn start (this command executes start script in package.json file that created by create-react-app command)
 
-      ```
+      ```bash
       cd yourappname
       npm start
       OR
@@ -32,7 +32,18 @@
 
    5. Previous command will run the serve the app to you and your LAN on port 3000 (ex: localhost:3000)
 
-   6. Congrulations!! You are ready to start programming your app now.
+   6. Congratulations!! You are ready to start programming your app now.
 
-------
+      ------
 
+2. ### Styling using Reactstrap+Bootstrap
+
+   1. Install reactstrap and bootstrap with npm/yarn
+
+   ```bash
+   npm i reactstrap
+   npm i bootstrap
+   ```
+
+   	2. Import to your code
+    	3.  [Components Guide](http://reactstrap.github.io/components)
