@@ -67,6 +67,6 @@
     json-server --watch db.json
     ```
 
-     	2. Port (3000) may conflict. Restart your react server
+    2. Port (3000) may conflict. Restart your react server
 
     
