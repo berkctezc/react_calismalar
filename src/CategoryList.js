@@ -6,13 +6,10 @@ export default class CategoryList extends Component {
     categories: [
       { categoryId: 1, categoryName: "Beverages" },
       { categoryId: 2, categoryName: "Condiments" },
-    ],
-    currentCategory : ""
+    ]
   }; 
 
-  changeCategory = (category) => {
-    this.setState({currentCategory:category.categoryName})
-  }
+
   render() {
     return (
       <div>
@@ -23,13 +20,13 @@ export default class CategoryList extends Component {
         <ListGroup>
           {//map fonksiyonu ile objeyi veya arrayi döngü ile item olarak atama yaptık
           this.state.categories.map(category => (
-            <ListGroupItem onClick={()=>this.changeCategory(category)} key={category.categoryId}>
+            <ListGroupItem onClick={()=>this.props.changeCategory(category)} key={category.categoryId}>
               {category.categoryName}
             </ListGroupItem>
             //key = her elemanın unique değeri yani id'si
           ))}
         </ListGroup>
-        <h4>{this.state.currentCategory}</h4>
+        <h4>{this.props.currentCategory}</h4>
       </div>
     );
   }
