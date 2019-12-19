@@ -11,7 +11,7 @@
 
       ```bash
       npm i -g create-react-app
-      OR
+      #OR
       yarn global add create-react-app
       ```
 
@@ -36,7 +36,7 @@
 
    ------
 
-2. ### Styling using Reactstrap+Bootstrap
+2. ### Styling using Reactstrap + Bootstrap
 
    1. Install reactstrap and bootstrap with npm/yarn
 
@@ -45,9 +45,28 @@
    npm i bootstrap
    ```
 
-    	2. Import to your code
-    	3.  [Components Guide](http://reactstrap.github.io/components)
+    2. Import to your code
+    3.  [Components Guide](http://reactstrap.github.io/components)
 
    ------
 
- 3. Props, States, Events
+ 3. ### Props, States, Events
+
+     1. to be filled later
+
+    ------
+
+
+ 4. ### Fake API with json-server
+
+    1. Install json server and run it with a json file you desire
+
+    ```bash
+    npm i -g json-server
+    cd #jsondirectory
+    json-server --watch db.json
+    ```
+
+     	2. Port (3000) may conflict. Restart your react server
+
+    
