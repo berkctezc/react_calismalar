@@ -34,7 +34,7 @@
 
    6. Congratulations!! You are ready to start programming your app now.
 
-      ------
+   ------
 
 2. ### Styling using Reactstrap+Bootstrap
 
@@ -45,5 +45,9 @@
    npm i bootstrap
    ```
 
-   	2. Import to your code
+    	2. Import to your code
     	3.  [Components Guide](http://reactstrap.github.io/components)
+
+   ------
+
+ 3. Props, States, Events

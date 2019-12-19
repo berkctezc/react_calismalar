@@ -6,26 +6,30 @@ export default class CategoryList extends Component {
     categories: [
       { categoryId: 1, categoryName: "Beverages" },
       { categoryId: 2, categoryName: "Condiments" },
-      { categoryName: "heey" }
-    ]
+    ],
+    currentCategory : ""
   }; 
 
+  changeCategory = (category) => {
+    this.setState({currentCategory:category.categoryName})
+  }
   render() {
     return (
       <div>
-        <h3>{this.props.info.title}</h3>{" "}
-        {/* App.js'de component'e yazılan title degeri -> <h3>Category List</h3> */}
+          {/* App.js'de component'e yazılan title degeri -> <h3>Category List</h3> */}
+        <h3>{this.props.info.title}</h3>
         <h3>{this.state.counter}</h3> {/* state kullanımı */}
         {/*Reactstrapten kullandığımız listgroup*/}
         <ListGroup>
           {//map fonksiyonu ile objeyi veya arrayi döngü ile item olarak atama yaptık
           this.state.categories.map(category => (
-            <ListGroupItem key={category.categoryId}>
+            <ListGroupItem onClick={()=>this.changeCategory(category)} key={category.categoryId}>
               {category.categoryName}
             </ListGroupItem>
             //key = her elemanın unique değeri yani id'si
           ))}
         </ListGroup>
+        <h4>{this.state.currentCategory}</h4>
       </div>
     );
   }
