@@ -9,11 +9,23 @@ import { Container, Row, Col } from "reactstrap"; //kullandığımız reactstrap
 
 export default class App extends Component {
 
-  state={currentCategory:""}
+  state={currentCategory:"",products:[]}
+
+  componentDidMount(){
+    this.getProducts();
+  }
 
   changeCategory = (category) => { //event fonksiyon (onclickte kullanildi)
     this.setState({currentCategory:category.categoryName})
   };
+
+  getProducts = ()=>{
+    fetch("http://localhost:3000/products")
+    .then(response=>response.json())
+    .then(data=>this.setState({products: data}))
+  };
+
+
   render() {
     let infoNavi = { title: "Navbar" };
     let productInfo = { title: "Product List" };
@@ -30,7 +42,10 @@ export default class App extends Component {
               <CategoryList currentCategory={this.state.currentCategory} changeCategory={this.changeCategory} info={categoryInfo} /> {/*Props yapisi icin (solda verilen degisken ismi component ici kullanilabilir)*/}
             </Col>
             <Col xs="9">
-              <ProductList currentCategory={this.state.currentCategory} info={productInfo} />
+              <ProductList 
+              products={this.state.products}
+              currentCategory={this.state.currentCategory} 
+              info={productInfo} />
             </Col>
           </Row>
         </Container>
