@@ -30,7 +30,7 @@
       yarn start
       ```
 
-   5. Previous command will run the serve the app to you and your LAN on port 3000 (ex: localhost:3000)
+   5. Previous command will serve the app to you and your LAN on port 3000 (ex: localhost:3000)
 
    6. Congratulations!! You are ready to start programming your app now.
 
@@ -57,7 +57,7 @@
     ------
 
 
- 4. ### Fake API with json-server
+ 4. ### Fake API with json-server (you can also use mockoon)
 
     1. Install json server and run it with a json file you desire
 

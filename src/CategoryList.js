@@ -10,6 +10,17 @@ export default class CategoryList extends Component {
   }; 
 
 
+  getCategories = ()=>{
+    fetch("http://localhost:3000/categories")
+    .then(response=>response.json())
+    .then(data=>this.setState({categories:data}))
+  }
+
+  componentDidMount(){
+    this.getCategories();
+  }
+
+
   render() {
     return (
       <div>
@@ -20,7 +31,7 @@ export default class CategoryList extends Component {
         <ListGroup>
           {//map fonksiyonu ile objeyi veya arrayi döngü ile item olarak atama yaptık
           this.state.categories.map(category => (
-            <ListGroupItem onClick={()=>this.props.changeCategory(category)} key={category.categoryId}>
+            <ListGroupItem onClick={()=>this.props.changeCategory(category)} key={category.id}>
               {category.categoryName}
             </ListGroupItem>
             //key = her elemanın unique değeri yani id'si
